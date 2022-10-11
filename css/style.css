@@ -29,7 +29,7 @@
 .intro {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: 1280px;
+  background-position-x: 768px;
   background-position-y: center;
   transition: .3s;
 }
@@ -44,29 +44,21 @@
 }
 
 .intro h2, .intro p {
-  width: 75%;
-}
-
-@media only screen and (max-width: 1840px) {
-  .intro {
-    background-position-x: 1024px;
-  }
+  width: 50%;
 }
 
 @media only screen and (max-width: 1280px) {
-  .intro {
-    background-position-x: 768px;
-  }
+
 }
 
 @media only screen and (max-width: 1024px) {
   .intro {
-    background-position-x: 640px;
+    background-position-x: 540px;
   }
 
-  .intro h2, .intro p {
-    width: 50%;
-  }
+  /* .intro h2, .intro p {
+    width: 66%;
+  } */
 }
 
 @media only screen and (max-width: 960px) {
@@ -76,7 +68,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-
+  .intro h2, .intro p {
+    width: 75%;
+  }
 }
 
 @media only screen and (max-width: 640px) {

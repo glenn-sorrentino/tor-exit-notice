@@ -16,9 +16,15 @@
        url("../fonts/serif/bold.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Mono";
+  src: url("../fonts/mono/RobotoMono-Regular.woff2") format("woff2"),
+       url("../fonts/mono/RobotoMono-Regular.woff") format("woff");
+}
+
 @media (prefers-color-scheme: light) {
-  h1, h2, h3, h4, h5, h6, p {
-    color: var(--color-dark);
+  h1, h2, h3, h4, h5, h6 {
+    color: #CF63A6;
   }
 
   p.meta {
@@ -29,7 +35,7 @@
     color: var(--color-label-lm);
   }
 
-  ul li {
+  ul li, p {
     color: var(--color-dark);
   }
 
@@ -86,6 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: var(--line-height-heading);
   width: fit-content;
+  font-family: 'Mono';
 }
 
 article h2,
