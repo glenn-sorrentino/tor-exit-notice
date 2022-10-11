@@ -66,5 +66,7 @@
 }
 
 @media only screen and (max-width: 480px) {
-
+  .intro h2, .intro p {
+    width: 100%;
+  }
 }
