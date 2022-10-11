@@ -1,6 +1,6 @@
 # Tor Exit Notice
 
-https://glenn-sorrentino.github.io/tor-exit-page/
+https://glenn-sorrentino.github.io/tor-exit-notice-refresh/
 
 <p style="text-align:center">
 
