@@ -8,6 +8,11 @@
     background-image: url("../images/intro-bg-lm.png");
   }
 
+  .btn {
+    outline: 1px solid rgba(255, 255, 255, .8);
+    border: 1px solid rgba(0,0,0,.3) !important;
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {
