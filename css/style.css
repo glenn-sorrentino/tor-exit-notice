@@ -31,7 +31,6 @@
   background-position-x: 1280px;
   background-position-y: center;
   transition: .3s;
-
 }
 
 .primaryBtn {
@@ -47,7 +46,7 @@
   width: 75%;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1840px) {
   .intro {
     background-position-x: 1024px;
   }
