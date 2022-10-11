@@ -28,9 +28,10 @@
 .intro {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: 1024px;
+  background-position-x: 1280px;
   background-position-y: center;
   transition: .3s;
+
 }
 
 .primaryBtn {
@@ -44,6 +45,12 @@
 
 .intro h2, .intro p {
   width: 75%;
+}
+
+@media only screen and (max-width: 1440px) {
+  .intro {
+    background-position-x: 1024px;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
