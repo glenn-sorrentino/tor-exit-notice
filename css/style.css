@@ -4,10 +4,16 @@
 /* Add your custom styles in this file... */
 
 @media (prefers-color-scheme: light) {
+  .intro {
+    background-image: url("../images/intro-bg-lm.png");
+  }
 
 }
 
 @media (prefers-color-scheme: dark) {
+  .intro {
+    background-image: url("../images/intro-bg-dm.png");
+  }
 
 }
 
@@ -15,16 +21,38 @@
   padding-left: var(--spacing-base);
 }
 
-@media only screen and (max-width: 1280px) {
+.intro {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 1024px;
+  background-position-y: center;
+  transition: .3s;
+}
 
+.intro h2, .intro p {
+  width: 75%;
+}
+
+@media only screen and (max-width: 1280px) {
+  .intro {
+    background-position-x: 768px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
+  .intro {
+    background-position-x: 640px;
+  }
 
+  .intro h2, .intro p {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 960px) {
-
+  .intro {
+    background-position-x: 480px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -32,7 +60,9 @@
 }
 
 @media only screen and (max-width: 640px) {
-
+  .intro h2, .intro p {
+    width: 75%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
