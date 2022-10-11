@@ -29,6 +29,15 @@
   transition: .3s;
 }
 
+.primaryBtn {
+  background-color: #E7B1D2;
+  color: #24093B;
+}
+
+.btn {
+  border-radius: 50vw;
+}
+
 .intro h2, .intro p {
   width: 75%;
 }
