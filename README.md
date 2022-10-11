@@ -1,7 +1,8 @@
 # Tor Exit Notice
 
-<p style="text-align:center">
+https://glenn-sorrentino.github.io/tor-exit-page/
 
+<p style="text-align:center">
 
 <p>
 You are most likely accessing this website because you've had some issue with
