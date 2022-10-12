@@ -44,7 +44,7 @@
 }
 
 .intro h2, .intro p {
-  width: 50%;
+  width: 55%;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -75,7 +75,7 @@
 
 @media only screen and (max-width: 640px) {
   .intro h2, .intro p {
-    width: 85%;
+    width: 90%;
   }
 }
 
