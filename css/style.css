@@ -22,6 +22,10 @@
   border: 2px solid #895BA5 !important;
 }
 
+svg {
+    width: auto;
+}
+
 .links {
   padding-left: var(--spacing-base);
 }
