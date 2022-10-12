@@ -1,6 +1,7 @@
 # Tor Exit Notice Refresh
 
 https://exit.relay.love/
+
 https://glenn-sorrentino.github.io/tor-exit-notice-refresh/
 
 The Tor Project exit relay notice page updated with a more accessibile reading experience and a refreshed visual design.
