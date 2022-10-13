@@ -95,6 +95,12 @@ svg {
   .intro h2, .intro p {
     width: 90%;
   }
+
+  .intro {
+    background-position-x: 60vw;
+    background-size: 150vw;
+    background-position-y: bottom;
+  }
 }
 
 @media only screen and (max-width: 480px) {
