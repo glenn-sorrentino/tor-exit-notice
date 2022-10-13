@@ -8,11 +8,19 @@
     background-image: url("../images/intro-bg-lm.png");
   }
 
+  .imageViewport {
+    background-image: url("../images/tor-map-lm.png");
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {
   .intro {
-    background-image: url("../images/intro-bg-dm.png");
+    background-image: url("../images/intro-bg-lm.png");
+  }
+
+  .imageViewport {
+    background-image: url("../images/tor-map-lm.png");
   }
 
 }
@@ -24,6 +32,16 @@
 
 svg {
     width: 100%;
+}
+
+.imageViewport {
+  width: 100%;
+  max-width: 640px;
+  padding-top: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: var(--spacing-base) 0;
 }
 
 .links {

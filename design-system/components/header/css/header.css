@@ -18,15 +18,19 @@
 
 @media (prefers-color-scheme: dark) {
   header {
-    background-color: var(--color-dark-translucent) !important;
+    background-color: var(--color-light-translucent) !important;
+  }
+
+  header input {
+    border: var(--border-dark);
   }
 
   nav a.selected {
-    box-shadow: inset 0 -3px var(--color-light);
+    box-shadow: inset 0 -3px var(--color-dark);
   }
 
   nav ul li a:hover {
-    box-shadow: inset 0 -3px var(--color-light);
+    box-shadow: inset 0 -3px #895BA5;
   }
 }
 

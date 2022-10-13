@@ -22,24 +22,23 @@
 
 @media (prefers-color-scheme: dark) {
   ::selection {
-      background-color: var(--color-light);
-      color: var(--color-dark);
-  }
-
-  body {
-    background-color: var(--shade-dm);
+      background-color: var(--color-dark);
+      color: var(--color-light);
   }
 
   input {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    border: var(--border-light-1);
-    background-image: url("../../design-system/images/input/icon-search-dm.png");
-
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border: var(--border-dark);
+    background-image: url("../../design-system/images/input/icon-search-lm.png");
   }
 
   a {
-    color: var(--color-light);
+    color: var(--color-dark);
+  }
+
+  body {
+    background-color: var(--color-shade-lm);
   }
 }
 

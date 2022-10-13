@@ -52,35 +52,31 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--color-dark);
-  }
-
-  h1, h2, h3, h4, h5, h6, p {
-    color: var(--color-light);
+  h1, h2, h3, h4, h5, h6 {
+    color: #CF63A6;
   }
 
   p.meta {
-    color: var(--color-label-dm);
+    color: var(--color-label-lm);
   }
 
   p.meta a {
-    color: var(--color-label-dm);
+    color: var(--color-label-lm);
   }
 
-  ul li {
-    color: var(--color-light);
+  ul li, p {
+    color: var(--color-dark);
   }
 
   .code {
-    color: #EE72AC;
-    background-color: var(--color-shade-dm);
-    border: var(--border-light);
+    color: #e83e8c;
+    background-color: var(--color-shade-lm);
+    border: var(--border-dark);
   }
 
   .highlight {
-    background-color: var(--color-light);
-    color: var(--color-dark);
+    background-color: var(--color-dark);
+    color: white;
   }
 }
 
