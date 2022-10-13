@@ -8,7 +8,7 @@ http://u2apnsn2fpquzlfxbhnrheoj3aol5mmjuznqr3bpxnynxgqdgryillqd.onion/
 
 Updated Tor exit relay notice with a more accessibile reading experience and a refreshed visual design.
 
-![Frame 256](https://user-images.githubusercontent.com/28545431/195223293-d0ffcc29-3be7-4f58-90d6-9c4e806533db.png)
+![Frame 258](https://user-images.githubusercontent.com/28545431/195473311-92aaa3d7-8c73-4097-b138-ed4a6df330a0.png)
 
 <p style="text-align:center">
 
