@@ -145,7 +145,7 @@ nav .badge {
   max-width: none;
 }
 
-@media only screen and (max-width: 540px) {
+/* @media only screen and (max-width: 540px) {
   @media (prefers-color-scheme: light) {
     header nav ul {
       box-shadow: var(--shadow-lm);
@@ -216,4 +216,4 @@ nav .badge {
     margin-right: 0;
     margin-left: var(--spacing-medium);
   }
-}
+} */
