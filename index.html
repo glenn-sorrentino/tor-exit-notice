@@ -1,28 +1,86 @@
 <!doctype html>
 
-<!-- Hey there! Thanks for taking a closer look at the code 😎
-This project is a work IN-PROGRESS! If you'd like to help make
-it better  - i.e. more accessible, align closer with
-W3C/WHATWG Standards, etc - please consider contributing 🙏 -->
-
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="author" content="Glenn Sorrentino">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="This router is part of the Tor Anonymity Networ, which is dedicated to providing privacy to people who need it most."> <!-- Keep the description to around 20 words or 150 characters so it displays fully on Google search results. -->
+	<meta name="description" content="This router is part of the Tor Anonymity Networ, which is dedicated to providing privacy to people who need it most.">
 
 	<title>Tor Exit Relay</title>
 
 	<link rel="icon" type="image/x-icon" href="design-system/images/favicon/favicon.ico">
-	<link rel="stylesheet" href="design-system/css/style.css">
+	<style>
 
-	<script src="design-system/js/jquery-min.js"></script>
-	<script src="design-system/js/design-system.js"></script>
+		header {position: fixed; top: 0; right: 0; left: 0; flex: 0 1 auto; z-index: 9; backdrop-filter: blur(1rem); -webkit-backdrop-filter: blur(1rem);}
+		header {background-color: rgba(255, 255, 255, .8);}
+  		nav a:hover {box-shadow: inset 0 -3px #895BA5;}
+  		header .wrapper {display: flex; justify-content: space-between; flex-direction: row;}
+		header h1 {width: fit-content; font-size: 1.5rem;white-space: nowrap;}
+		header .logo {display: flex; align-items: center; padding: 1.5rem 0; line-height: 1.5; display: flex; width: fit-content; font-weight: bold;}
+		header a {text-decoration: none;}
+		header h1 a:hover {text-decoration: underline;}
+		.mobileNav {display: none;}
+		nav {display: flex; justify-content: flex-end; width: fit-content;}
+		nav a.wrapper {max-width: initial;width: initial;display: flex;padding: 0 .875rem;}
+		nav a {display: flex;height: 100%;align-items: center;font-size: .875rem;letter-spacing: .025rem;}
+		.imageViewport {width: 100%;max-width: 640px;padding-top: 50%;background-repeat: no-repeat;background-size: contain;background-position: center;margin: 1rem 0;}
+		.intro {background-size: cover;background-repeat: no-repeat;background-position-x: 1280px;background-position-y: center;transition: .3s;}
+		.primaryBtn {background-color: #E7B1D2;color: #24093B;}
+		.btn {font-size: 1rem;border-radius: 50vw; padding: 1rem 1.25rem; outline: 2px solid rgba(255, 255, 255, .5);border: 2px solid #895BA5; font-weight: 700;font-family: monospace; height: fit-content; align-self: center;}
+		:focus {text-decoration: underline;outline: solid;}
+		.btn:focus {text-decoration: underline;outline: solid;}
+		.hidden {display: none;}
+		input:focus {text-decoration: none;}
+		html { font-family: monospace; }
+		body {display: flex;flex-flow: column;height: 100%; margin: 0;background-color:#fafafa;}
+		h2 {font-size: 4rem; margin: 0;}
+		h2,h3,h4,h5,h6 {color:#CF63A6;}
+		a {cursor: pointer; color: #333;}
+		p {font-family: sans-serif; max-width: 640px; font-size: 1.5rem; line-height: 1.6; color: #333;}
+		ul {margin: .75rem 0;}
+		ul li {margin: 1rem 0; font-size: 1.5rem; font-family: sans-serif;}
+		ul li:first-of-type {margin: 0;}
+		img {margin: 1rem 0;width: 100%;}
+		header, article, section, footer {display: flex;justify-content: center;}
+		section {margin: 0 0 4rem 0;}
+		.wrapper {max-width: 1280px;width: 100%;display: flex;padding: 0 2rem;flex-direction: column;}
+		.intro {height: 80vh;align-items: center;position: relative; background-color: white; border-bottom: 1px solid rgba(0,0,0,0.1);}
+		.intro h2 {width: 60%;line-height: 1.2;}
+		.intro p {font-size: 1rem;}
+		.intro p:last-of-type {margin-bottom: 0;}
+		footer p {font-size: .875rem;}
+		.banner p, .banner a {color: #24093B; font-family: monospace; font-size: .875rem}
+		.banner {background-color: #E7B1D2;color: #24093B; height: 40px;text-align: center;position: fixed;top: 0;width: 100%;z-index: 1;display: flex;align-items: center;flex-direction: row;}
+		.banner p {padding: 0;width: fit-content;margin: 0 auto;}
+		.banner + header {top: 40px !important;}
+		.banner.hidden + header {top: 0px !important;}
+		.banner + header ~ div .intro h2 {margin-top: 40px;}
+		.btn:hover {filter: brightness(105%);box-shadow: 0 2px 0 0 rgba(0,0,0,0.1);}
+		.btn:active {box-shadow: inset 0 2px 0 rgba(0,0,0,0.1);filter: brightness(95%);}
+		@media only screen and (max-width: 960px) {
+			header h1 {font-size: 1.2rem;}
+			.intro h2 {font-size: 3.5rem;}
+		}
+		@media only screen and (max-width: 768px) {
+			header h1 {font-size: 1.2rem;}
+			.intro h2 {width: 100%; font-size: 3rem;}
+			.btn {font-size: 1rem; white-space: nowrap;}
+		}
+		@media only screen and (max-width: 375px) {
+			header h1 {font-size: 1.2rem;}
+			.btn {font-size: .875rem;}
+		}
+
+	</style>
+
 </head>
 
 <body>
+	<div class="banner">
+		<p>Is this resource helpful? <a href="https://opencollective.com/scidsg#category-CONTRIBUTE" target="_blank" rel="noopener noreferrer">Support our work</a>!</p>
+	</div>
 	<header>
 		<div class="wrapper">
 			<div class="logo">
@@ -30,10 +88,7 @@ W3C/WHATWG Standards, etc - please consider contributing 🙏 -->
 				<h1><a href="#">🧅 Tor Exit Relay</a></h1>
 			</div>
 			<nav>
-				<ul>
-					<li><a role="button" class="btn primaryBtn btnLrg" href="https://community.torproject.org/relay/setup/" target="_blank" rel="noopener noreferrer">Run a Relay</a></li>
-				</ul>
-				<a class="mobileNav btnIcon"></a>
+				<a role="button" class="btn primaryBtn btnLrg" href="https://community.torproject.org/relay/setup/" target="_blank" rel="noopener noreferrer">Sponsor a Relay</a>
 			</nav>
 		</div>
 	</header>
@@ -46,7 +101,6 @@ W3C/WHATWG Standards, etc - please consider contributing 🙏 -->
 				<p>
 				<a href="https://2019.www.torproject.org/about/overview" target="_blank" rel="noopener noreferrer">Read more about how Tor works</a></p>
 			</div>
-			<p class="hint">Scroll Down</p>
 		</section>
 
 		<section>
@@ -66,6 +120,7 @@ W3C/WHATWG Standards, etc - please consider contributing 🙏 -->
 				exit node like this one. This design makes it very hard for a service to
 				know which user is connecting to it, since it can only see the IP-address
 				of the Tor exit node:</p>
+
 				<p style="text-align:center;margin:40px 0">
 				<svg xmlns="http://www.w3.org/2000/svg" width="500" viewBox="0 0 490.28 293.73" style="width:100%;max-width:600px">
 				<desc>Illustration showing how a user might connect to a service through the Tor network. The user first sends their data through three daisy-chained encrypted Tor servers that exist on three different continents. Then the last Tor server in the chain connects to the target service over the normal internet.</desc>
@@ -184,7 +239,7 @@ W3C/WHATWG Standards, etc - please consider contributing 🙏 -->
 
 				<p>
 				That being said, if you still have a complaint about the router,  you may
-				email the <a href="mailto:FIXME_YOUR_EMAIL_ADDRESS">maintainer</a>. If
+				email the <a href="mailto:abuse@scidsg.org">maintainer</a>. If
 				complaints are related to a particular service that is being abused, I will
 				consider removing that service from my exit policy, which would prevent my
 				router from allowing that traffic to exit through it. I can only do this on an
@@ -209,7 +264,7 @@ W3C/WHATWG Standards, etc - please consider contributing 🙏 -->
 
 	<footer>
 		<div class="wrapper">
-			<p><a property="dct:title" href="https://github.com/glenn-sorrentino/design-system" target="_blank" rel="cc:attributionURL noopener noreferrer">Simple Design System</a> by <a property="cc:attributionName" href="https://glennsorrentino.com/" target="_blank" rel="cc:attributionURL dct:creator noopener noreferrer">Glenn Sorrentino</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY 4.0</a></p>
+			<p><a property="dct:title" href="https://github.com/glenn-sorrentino/design-system" target="_blank" rel="noopener noreferrer">This Exit Notice Page</a> by <a property="cc:attributionName" href="https://scidsg.org/" target="_blank" rel="cc:attributionURL dct:creator noopener noreferrer">Science & Design</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY 4.0</a></p>
 		</div>
 	</footer>
 
